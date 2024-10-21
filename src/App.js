@@ -6,10 +6,9 @@ function App() {
     const [counter, setValue] = useState(0);
     const onClick = () => setValue((prev) => prev + 1);
     console.log("난 항상 실행돼");
-    const iRunOnlyOnce = () => {
-        console.log("난 한번만 실행돼");
-    };
-    useEffect(iRunOnlyOnce, []);
+    useEffect(() => {
+        console.log("api 불러오기");
+    }, []);
     return (
         <div>
             <h1 className={styles.title}>{counter}</h1>
