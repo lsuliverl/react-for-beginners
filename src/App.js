@@ -2,24 +2,24 @@ import Button from "./Button";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
 
-// function Hello() {
-//     useEffect(() => {
-//         console.log("생성됌!");
-//         return () => console.log("삭제됌");
-//     }, []);
-//     return <h1>안녕</h1>;
-// }
 function Hello() {
-    function byFn() {
-        console.log("삭제됌");
-    }
-    function hiFn() {
+    useEffect(() => {
         console.log("생성됌!");
-        return byFn;
-    }
-    useEffect(hiFn, []);
+        return () => console.log("삭제됌");
+    }, []);
     return <h1>안녕</h1>;
 }
+// function Hello() {
+//     function byFn() {
+//         console.log("삭제됌");
+//     }
+//     function hiFn() {
+//         console.log("생성됌!");
+//         return byFn;
+//     }
+//     useEffect(hiFn, []);
+//     return <h1>안녕</h1>;
+// }
 
 function App() {
     const [counter, setValue] = useState(0);
