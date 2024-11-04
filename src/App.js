@@ -6,6 +6,9 @@ function Hello() {
     useEffect(() => {
         console.log("생성됌!");
         return () => console.log("삭제됌");
+        // return function () {
+        //     console.log("삭제됌");
+        // };
     }, []);
     return <h1>안녕</h1>;
 }
